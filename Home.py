@@ -23,7 +23,7 @@ fifa_years = st.sidebar.radio(
     captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."]
 )
 if fifa_years:
-    st.header('FIFA OFFICIAL DATASET' ⚽ :rainbow[YEAR {}]'.format(fifa_years)) 
+    st.header('FIFA OFFICIAL DATASET ⚽ :rainbow[YEAR {}]'.format(fifa_years))
     # st.header(type("xpto "+str(fifa_years)))
     # st.header("xpto "+str(fifa_years))
 st.sidebar.markdown("Projeto Lucas Sena Alves(https://smartsena.github.io/portifolio_projetos")
