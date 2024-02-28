@@ -13,7 +13,7 @@ import pandas as pd
 
 st.set_page_config(
     page_title="Pleads",
-    page_icon=":dart:",
+    page_icon="⚽",
     layout="wide"
 )
 st.write("# Analytic Tabular: 🚀")
@@ -35,7 +35,7 @@ player_stats = player_stats[player_stats["Club"] == club].iloc[0]
 st.image(player_stats['Photo'])
 st.title(f"{player_stats['Name']}")
 
-st.divider()
+st.write("---") #st.divider()
 
 st.markdown(f"**Clube:** {player_stats['Club']}")
 st.markdown(f"**Posição:** {player_stats['Position']}")
@@ -48,7 +48,7 @@ col3.markdown("**Peso:** {}" .format(player_stats['Weight(lbs.)'] * 0.453))#:.2f
 # col4.markdown(f"**:** {player_stats['']}")
 
 
-st.divider()
+st.write("---") #st.divider()
 
 st.subheader(f"Overall {player_stats['Overall']}")
 st.progress(int(player_stats['Overall']))
@@ -60,15 +60,5 @@ col7.metric(label="Valor de rescisão", value=f"{player_stats['Release Clause(£
 # col.metric(f"**:** {player_stats['']}")
 
 #---------------------------------------------#
-# player_stats['Photo']
-# st.write("# club Analytic Tabular:")
-# club
-
-# st.write("# player Analytic Tabular:")
-# player
-
-# st.write("# df_players Analytic Tabular:")
-# df_players
-
-# st.write("# players Analytic Tabular:")
+# st.subheader("Proporção do jogador no time: 'Overall' vs 'Value(£)'" )
 st.dataframe(player_stats, width=400)
