@@ -49,8 +49,8 @@ if "df_data" not in st.session_state:
 if fifa_years:
     st.header('FIFA OFFICIAL DATASET ⚽ :rainbow[YEAR {}]'.format(fifa_years))
 
-btn_kaggle_fifa23 = st.button("KAGGLE FIFA23")
-btn_portifoil = st.button("Portifólio de Projetos")
+btn_kaggle_fifa23 = st.link_button("KAGGLE FIFA23","https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
+btn_portifoil = st.link_button("Portifólio de Projetos","https://smartsena.github.io/portifolio_projetos")
 
 if btn_kaggle_fifa23:
     # webbrowser.open_new_tab("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
