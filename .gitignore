@@ -1,6 +1,7 @@
 # File repositorys
 data/
-
+pages/4_painelC.py
+pages/5_painelD.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
