@@ -16,7 +16,7 @@ st.set_page_config(
     page_icon="⚽",
     layout="wide"
 )
-st.write("# Analytic Tabular: 🚀")
+# st.write("# Analytic Tabular: 🚀")
 
 df = st.session_state['df_data']
 
@@ -32,6 +32,15 @@ player = st.sidebar.selectbox('Jogador', players)
 player_stats = df[df["Name"] == player]
 player_stats = player_stats[player_stats["Club"] == club].iloc[0]
 # player_stats["Photo"]
+
+with st.container():
+    col1, col2 = st.columns(2)
+    with col1:
+        st.header(club)
+    with col2:    
+        st.image(df_players.iloc[0]['Club Logo'])
+    # st.markdown("""---""")
+
 st.image(player_stats['Photo'])
 st.title(f"{player_stats['Name']}")
 
@@ -59,6 +68,8 @@ col6.metric(label= "Remuneração Semanal", value=f"{player_stats['Wage(£)']:,}
 col7.metric(label="Valor de rescisão", value=f"{player_stats['Release Clause(£)']:,}")
 # col.metric(f"**:** {player_stats['']}")
 
+st.write("---") #st.divider()
+
 #---------------------------------------------#
 # st.subheader("Proporção do jogador no time: 'Overall' vs 'Value(£)'" )
-st.dataframe(player_stats, width=400)
+# st.dataframe(player_stats, width=400)
