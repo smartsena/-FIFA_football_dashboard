@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import webbrowser
+# import webbrowser
 from datetime import datetime
 
 
@@ -53,9 +53,11 @@ btn_kaggle_fifa23 = st.button("KAGGLE FIFA23")
 btn_portifoil = st.button("Portifólio de Projetos")
 
 if btn_kaggle_fifa23:
-    webbrowser.open_new_tab("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
+    # webbrowser.open_new_tab("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
+    st.sidebar.markdown("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
 if btn_portifoil:
-    webbrowser.open_new_tab("https://smartsena.github.io/portifolio_projetos")
+    # webbrowser.open_new_tab("https://smartsena.github.io/portifolio_projetos")
+    st.sidebar.markdown("https://smartsena.github.io/portifolio_projetos")
 
 st.markdown("""
 #### About Dataset CONTEXT
