@@ -74,6 +74,8 @@ with st.container():
                 },hide_index=True,height=1000,use_container_width=True,
                 )
 
+st.markdown("""---""")
+
 with st.container():
     st.subheader("Overall rating of the player's")
     df_aux = df_club.loc[:,['Name','Overall']].sort_values(['Overall','Name'])
