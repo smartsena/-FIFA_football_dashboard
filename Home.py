@@ -35,19 +35,19 @@ st.sidebar.markdown("Projeto Lucas Sena Alves(https://smartsena.github.io/portif
 
 # if fifa_years
 if "df_data" not in st.session_state:
-    fifa2023 = pd.read_csv("datasets/CLEAN_FIFA23_official_data.csv", encoding="utf8", index_col=0)
-    fifa2022 = pd.read_csv("datasets/CLEAN_FIFA22_official_data.csv", encoding="utf8", index_col=0)
-    fifa2021 = pd.read_csv("datasets/CLEAN_FIFA21_official_data.csv", encoding="utf8", index_col=0)
-    fifa2020 = pd.read_csv("datasets/CLEAN_FIFA20_official_data.csv", encoding="utf8", index_col=0)
-    fifa2019 = pd.read_csv("datasets/CLEAN_FIFA19_official_data.csv", encoding="utf8", index_col=0)
-    fifa2018 = pd.read_csv("datasets/CLEAN_FIFA18_official_data.csv", encoding="utf8", index_col=0)
-    fifa2017 = pd.read_csv("datasets/CLEAN_FIFA17_official_data.csv", encoding="utf8", index_col=0)
+    # fifa2023 = pd.read_csv("datasets/CLEAN_FIFA23_official_data.csv", encoding="utf8", index_col=0)
+    # fifa2022 = pd.read_csv("datasets/CLEAN_FIFA22_official_data.csv", encoding="utf8", index_col=0)
+    # fifa2021 = pd.read_csv("datasets/CLEAN_FIFA21_official_data.csv", encoding="utf8", index_col=0)
+    # fifa2020 = pd.read_csv("datasets/CLEAN_FIFA20_official_data.csv", encoding="utf8", index_col=0)
+    # fifa2019 = pd.read_csv("datasets/CLEAN_FIFA19_official_data.csv", encoding="utf8", index_col=0)
+    # fifa2018 = pd.read_csv("datasets/CLEAN_FIFA18_official_data.csv", encoding="utf8", index_col=0)
+    # fifa2017 = pd.read_csv("datasets/CLEAN_FIFA17_official_data.csv", encoding="utf8", index_col=0)
     # df = "fifa"+str(fifa_years).copy()
     # print(df)
     # print(type(df))
     # https://docs.streamlit.io/library/api-reference/session-state
     
-    df = fifa2023
+    df = pd.read_csv("datasets/CLEAN_FIFA23_official_data.csv", encoding="utf8", index_col=0)
     # print(df)
     
     df = df[df["Contract Valid Until"] >= datetime.today().year]
@@ -56,9 +56,9 @@ if "df_data" not in st.session_state:
     df = df.reset_index(drop=True)
     st.session_state["df_data"] = df
     
-if "data_old" not in st.session_state:
-    df_old = pd.read_csv("datasets/consolidado_BI_TI_amostra_short.csv", encoding="utf8", index_col=0)
-    st.session_state["data_old"] = df_old
+# if "data_old" not in st.session_state:
+#     df_old = pd.read_csv("datasets/consolidado_BI_TI_amostra_short.csv", encoding="utf8", index_col=0)
+#     st.session_state["data_old"] = df_old
 
 ##-------------------------##
 ##-------------------------##
